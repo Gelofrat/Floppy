@@ -25,6 +25,27 @@ Install Floppy with Thunderstore Mod Manager or r2modman. The required BepInEx p
 2. Extract the `BepInEx` folder from this package into your Mycopunk game folder.
 3. Launch the game.
 
+## Building from source
+
+Requirements: Windows, Git, a .NET SDK with C# 10 or newer support, the .NET
+Framework 4.8 Developer Pack, and a Mycopunk installation with BepInEx installed.
+
+Run these commands in PowerShell:
+
+```powershell
+git clone https://github.com/Gelofrat/Floppy.git
+cd Floppy
+dotnet build Floppy.csproj -c Release -p:GameRoot="D:\SteamLibrary\steamapps\common\Mycopunk"
+```
+
+Replace the example `GameRoot` with your own Mycopunk game folder. It must
+contain `Mycopunk_Data/Managed` and `BepInEx/core`; the required DLLs are
+referenced from that installation.
+
+The built plugin is `bin/Release/Floppy.dll`. Copy it into your game's
+`BepInEx/plugins/Floppy/` folder. The model, textures and sounds are embedded
+in the DLL.
+
 ## Contact
 
 For questions or suggestions, feel free to contact me on [Discord](https://discord.com/users/970246624985120828).
