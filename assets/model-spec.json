@@ -1,0 +1,81 @@
+{
+  "blender_version": "5.2.0 LTS",
+  "baked_asset_scale": 0.3754621093776693,
+  "runtime_root_scale": 1,
+  "runtime_axis_conversion": [
+    "-X",
+    "Z",
+    "-Y"
+  ],
+  "surface_uv_projection": "dominant_face_world_before_bevel",
+  "surface_uv_tiles_per_unit": 2.0,
+  "body_size_unity": [
+    0.9198821679752898,
+    1.809727367200366,
+    1.051293906257474
+  ],
+  "body_collider_center_unity": [
+    0.0,
+    0.904863683600183,
+    0.0
+  ],
+  "body_collider_size_unity": [
+    0.9198821679752898,
+    1.809727367200366,
+    1.051293906257474
+  ],
+  "tray_collider_center_unity": [
+    0.0,
+    0.9424098945379498,
+    0.5594385429727272
+  ],
+  "tray_collider_size_unity": [
+    0.7359057343802318,
+    0.6533040703171445,
+    0.05631931640665039
+  ],
+  "module_mesh_aabb": [
+    1.190312,
+    1.0934994,
+    1.37445426
+  ],
+  "module_renderer_scale": 0.5,
+  "module_visual_aabb": [
+    0.595156,
+    0.5467497,
+    0.68722713
+  ],
+  "aperture_size": [
+    0.7434149765677851,
+    0.7002368339893532
+  ],
+  "usable_cavity_height": 0.5885368564494965,
+  "tray_floor_top": 0.6861570048876906,
+  "tray_clearance": [
+    0.6889729707080231,
+    0.7809611875055521
+  ],
+  "tray_travel_unity": [
+    0.0,
+    0.0,
+    0.769697324224222
+  ],
+  "socket_center_unity": [
+    0.0,
+    0.9724468632881633,
+    0.13892098046973764
+  ],
+  "carriage_travel_unity": [
+    0.0,
+    0.0,
+    0.384848662112111
+  ],
+  "triangle_count": 38872,
+  "runtime_draw_groups": 19,
+  "preview_animation_fps": 30,
+  "preview_animation_frames": [
+    1,
+    240
+  ],
+  "references_excluded_from_exports": true
+}

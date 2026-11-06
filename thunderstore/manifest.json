@@ -1,0 +1,9 @@
+{
+  "name": "Floppy",
+  "version_number": "0.4.1",
+  "website_url": "",
+  "description": "Replaces the Ouroboros shop with Floppy, which exchanges a module for a random one of the same rarity.",
+  "dependencies": [
+    "BepInEx-BepInExPack_Mycopunk-5.4.2403"
+  ]
+}

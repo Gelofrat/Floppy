@@ -1,0 +1,48 @@
+{
+  "bank_id": 2537433134,
+  "generator_version": 172,
+  "events": {
+    "power_on": {
+      "event": "Play_Floppy_power_on",
+      "id": 3868088954,
+      "media_id": 2687367554,
+      "seconds": 1.6,
+      "spatial": false
+    },
+    "idle": {
+      "event": "Play_Floppy_idle",
+      "id": 4062538217,
+      "media_id": 4161993937,
+      "seconds": 2.0,
+      "spatial": true
+    },
+    "tray": {
+      "event": "Play_Floppy_tray",
+      "id": 1856290839,
+      "media_id": 1956257583,
+      "seconds": 0.75,
+      "spatial": true
+    },
+    "disk_read": {
+      "event": "Play_Floppy_disk_read",
+      "id": 2910740163,
+      "media_id": 2692344267,
+      "seconds": 1.9,
+      "spatial": true
+    },
+    "complete": {
+      "event": "Play_Floppy_complete",
+      "id": 925831886,
+      "media_id": 2434671750,
+      "seconds": 0.36,
+      "spatial": true
+    },
+    "power_off": {
+      "event": "Play_Floppy_power_off",
+      "id": 1679319312,
+      "media_id": 2992624728,
+      "seconds": 1.35,
+      "spatial": true
+    }
+  }
+}

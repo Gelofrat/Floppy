@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>Floppy</AssemblyName>
+    <RootNamespace>Horse.Floppy</RootNamespace>
+    <Version>0.4.1</Version>
+    <LangVersion>latest</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ManagedRoot>$(FloppyGameRoot)\Mycopunk_Data\Managed</ManagedRoot>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\**\*.cs" />
+    <EmbeddedResource Include="assets\Floppy.floppymesh" LogicalName="Floppy.Model" />
+    <EmbeddedResource Include="assets\audio\Floppy.bnk" LogicalName="Floppy.AudioBank" />
+    <EmbeddedResource Include="assets\textures\FloppyPlastic.floppytex" LogicalName="Floppy.Texture.Plastic" />
+    <EmbeddedResource Include="assets\textures\FloppyMetal.floppytex" LogicalName="Floppy.Texture.Metal" />
+    <Reference Include="BepInEx"><HintPath>$(FloppyGameRoot)\BepInEx\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(FloppyGameRoot)\BepInEx\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="AK.Wwise.Unity.API"><HintPath>$(ManagedRoot)\AK.Wwise.Unity.API.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="AK.Wwise.Unity.MonoBehaviour"><HintPath>$(ManagedRoot)\AK.Wwise.Unity.MonoBehaviour.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="AK.Wwise.Unity.API.WwiseTypes"><HintPath>$(ManagedRoot)\AK.Wwise.Unity.API.WwiseTypes.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(ManagedRoot)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(ManagedRoot)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedRoot)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.PhysicsModule"><HintPath>$(ManagedRoot)\UnityEngine.PhysicsModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(ManagedRoot)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(ManagedRoot)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(ManagedRoot)\Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(ManagedRoot)\UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.InputSystem"><HintPath>$(ManagedRoot)\Unity.InputSystem.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Collections"><HintPath>$(ManagedRoot)\Unity.Collections.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Netcode.Runtime"><HintPath>$(ManagedRoot)\Unity.Netcode.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Mathematics"><HintPath>$(ManagedRoot)\Unity.Mathematics.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="CheckGameReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'$(GameRoot)' == ''" Text="Set GameRoot in ignored Directory.Build.local.props, set MYCOPUNK_GAME_ROOT, or pass -p:GameRoot=... . See Directory.Build.local.props.example." />
+    <Error Condition="'$(GameRoot)' != '' and !Exists('$(ManagedRoot)\Assembly-CSharp.dll')" Text="GameRoot must contain Mycopunk_Data\Managed\Assembly-CSharp.dll: $(FloppyGameRoot)" />
+    <Error Condition="'$(GameRoot)' != '' and !Exists('$(FloppyGameRoot)\BepInEx\core\0Harmony.dll')" Text="Install BepInEx for Mycopunk at GameRoot before building: $(FloppyGameRoot)" />
+  </Target>
+</Project>

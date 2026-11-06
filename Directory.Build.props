@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <FloppyRepositoryRoot>$(MSBuildThisFileDirectory)</FloppyRepositoryRoot>
+    <GameRoot Condition="'$(GameRoot)' == '' and '$(MYCOPUNK_GAME_ROOT)' != ''">$(MYCOPUNK_GAME_ROOT)</GameRoot>
+  </PropertyGroup>
+  <Import Project="$(FloppyRepositoryRoot)Directory.Build.local.props" Condition="Exists('$(FloppyRepositoryRoot)Directory.Build.local.props')" />
+  <PropertyGroup>
+    <FloppyGameRoot Condition="'$(GameRoot)' != ''">$([System.IO.Path]::Combine('$(FloppyRepositoryRoot)', '$(GameRoot)'))</FloppyGameRoot>
+    <FloppyGameRoot Condition="'$(FloppyGameRoot)' != ''">$([System.IO.Path]::GetFullPath('$(FloppyGameRoot)'))</FloppyGameRoot>
+  </PropertyGroup>
+</Project>

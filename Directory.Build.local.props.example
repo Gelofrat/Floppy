@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Point to your own Mycopunk installation with BepInEx installed. -->
+    <GameRoot Condition="'$(GameRoot)' == ''">D:\SteamLibrary\steamapps\common\Mycopunk</GameRoot>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,12 @@
+* text=auto eol=lf
+# Preserve the author's publication text exactly, including line endings.
+README.md -text
+thunderstore/README.md -text
+*.blend binary
+*.fbx binary
+*.glb binary
+*.floppymesh binary
+*.floppytex binary
+*.bnk binary
+*.wav binary
+*.png binary
