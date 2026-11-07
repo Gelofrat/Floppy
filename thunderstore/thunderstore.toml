@@ -6,7 +6,7 @@ namespace = "Gelofrat"
 name = "Floppy"
 versionNumber = "0.4.1"
 description = "Replaces the Ouroboros shop with Floppy, which exchanges a module for a random one of the same rarity."
-websiteUrl = ""
+websiteUrl = "https://github.com/Gelofrat/Floppy"
 containsNsfwContent = false
 
 [package.dependencies]
